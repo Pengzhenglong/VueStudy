@@ -19,77 +19,84 @@ export default {
   data() {
     return {
       model: {
-        username: '',
-        password: ''
+        username: "",
+        password: "",
       },
       schema: {
         fields: [
           // 用户名配置
           {
-            type: 'input',
-            modelKey: 'username',
-            label: '用户名',
+            type: "input",
+            modelKey: "username",
+            label: "用户名",
             props: {
-              placeholder: '请输入用户名'
+              placeholder: "请输入用户名",
             },
 
             rules: {
               // 校验规则
               required: true,
-              type: 'string',
+              type: "string",
               min: 3,
               max: 15,
             },
-            trigger: 'blur',
+            trigger: "blur",
             messages: {
-              require: '用户名不能为空',
-              min: '用户名不能小于3个字',
-              max: '用户名不能大于15个字 '
-            }
+              require: "用户名不能为空",
+              min: "用户名不能小于3个字",
+              max: "用户名不能大于15个字 ",
+            },
           },
           // 登录配置
           {
-            type: 'input',
-            modelKey: 'password',
-            label: '密码',
+            type: "input",
+            modelKey: "password",
+            label: "密码",
             props: {
-              placeholder: '请输入密码',
-              type: 'password',
+              placeholder: "请输入密码",
+              type: "password",
               eye: {
-                open: false
-              }
+                open: false,
+              },
             },
             rules: {
               required: true,
             },
-            trigger: 'blur',
+            trigger: "blur",
           },
           {
-            type: 'submit',
-            label: '登录',
-          }
-        ]
-      }
-    }
+            type: "submit",
+            label: "登录",
+          },
+        ],
+      },
+    };
   },
   methods: {
-    submitHandler(e) {
+    async submitHandler(e) {
       e.preventDefault();
-      // this.$http.get('/api/register', { params: this.model }).then(res => {
-      //   console.log(res.data.success)
-      // }).catch(err => {
-      //   console.log(err)
-      // })
-    }
-  }
-}
-
+      try {
+        const result = await this.$http.get("/api/login", {
+          params: this.model,
+        });
+       if(result.data.code=='0'){
+         this.$store.commit('settoken',result.data.token)
+         window.localStorage.setItem('token',result.data.token)
+       }else{
+         alert(result.data.messages)
+       }
+      } catch (error) {
+        console.log(error);
+      }
+    },
+  },
+};
 </script>
 
-<style  lang="stylus"  scoped>
+<style lang="stylus" scoped>
 .header {
   width: 100%;
-  height: 150px
-  margin-bottom :10px
+  height: 150px;
+  margin-bottom: 10px;
 }
 </style>
