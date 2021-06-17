@@ -1,5 +1,10 @@
 <template>
   <div>
+    <img
+      class="header"
+      src="https://doge.zzzmh.cn/wallpaper/origin/47482bcb3a294e868546d6c73f1e7ca8.jpg/thumbs?auth_key=1623899499-5678B92A0C6BECED-0-e1ded7a0a07dbe5b7487cfc15163163fF"
+      alt=""
+    />
     <cube-form
       :model="model"
       :schema="schema"
@@ -10,7 +15,7 @@
 
 <script>
 export default {
-  name: 'register',
+  // name: 'Register',
   data() {
     return {
       model: {
@@ -70,16 +75,21 @@ export default {
   methods: {
     submitHandler(e) {
       e.preventDefault();
-      this.$http.get('/api/register', {params: this.model }).then(res=>{       
-          console.log(res.data.success)
-        }).catch(err=> {
-          console.log(err)
-        })
+      this.$http.get('/api/register', { params: this.model }).then(res => {
+        console.log(res.data.success)
+      }).catch(err => {
+        console.log(err)
+      })
     }
   }
 }
 
 </script>
 
-<style>
+<style  lang="stylus"  scoped>
+.header {
+  width: 100%;
+  height: 150px
+  margin-bottom :10px
+}
 </style>
