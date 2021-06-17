@@ -79,11 +79,11 @@ export default {
         const result = await this.$http.get("/api/login", {
           params: this.model,
         });
-       if(result.data.code=='0'){
-         this.$store.commit('settoken',result.data.token)
-         window.localStorage.setItem('token',result.data.token)
+       if(result.code=='0'){
+         this.$store.commit('settoken',result.token)
+         window.localStorage.setItem('token',result.token)
        }else{
-         alert(result.data.messages)
+         alert(result.messages)
        }
       } catch (error) {
         console.log(error);

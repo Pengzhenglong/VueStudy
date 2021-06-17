@@ -4,7 +4,8 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import  axios  from 'axios'
-
+import  setaxios  from  './setaxios'
+setaxios()
 Vue.config.productionTip = false
 Vue.prototype.$http=axios
 
