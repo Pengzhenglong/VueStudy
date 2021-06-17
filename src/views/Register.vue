@@ -44,37 +44,41 @@ export default {
           },
           // 登录配置
           {
-            type:'input',
-            modelKey:'password',
-            label:'密码',
-            props:{
-               placeholder: '请输入密码',
-               type:'password',
-               eye:{
-                 open:false
-               }
+            type: 'input',
+            modelKey: 'password',
+            label: '密码',
+            props: {
+              placeholder: '请输入密码',
+              type: 'password',
+              eye: {
+                open: false
+              }
             },
-            rules:{
-              required:true,
+            rules: {
+              required: true,
             },
-            trigger:'blur',
+            trigger: 'blur',
           },
           {
-            type:'submit',
-            label:'注册',
+            type: 'submit',
+            label: '注册',
           }
         ]
       }
     }
   },
-  methods:{
-    submitHandler(e){
-        e.preventDefault();
-        console.log("注册了 ")
+  methods: {
+    submitHandler(e) {
+      e.preventDefault();
+      this.$http.get('/api/register', {params: this.model }).then(res=>{       
+          console.log(res.data.success)
+        }).catch(err=> {
+          console.log(err)
+        })
     }
   }
-
 }
+
 </script>
 
 <style>
