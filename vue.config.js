@@ -50,7 +50,25 @@ module.exports = {
               message: "账号或密码错误",
             });
           }
-        });
+        })
+        // 首页轮播图数据接口
+        app.get('/api/banner',(req,res)=>{
+          res.json({
+          data:[{
+            url: 'https://pengzhenglong.github.io/',
+            image: 'https://doge.zzzmh.cn/wallpaper/origin/c8bfcd9f880411ebb6edd017c2d2eca2.jpg/thumbs?auth_key=1623987723-5C41345168856649-0-54ae67b7131193558e561d7f76389b20'
+          },
+          {
+            url: 'https://pengzhenglong.github.io/',
+            image: 'https://doge.zzzmh.cn/wallpaper/origin/c5398839880411ebb6edd017c2d2eca2.jpg/thumbs?auth_key=1623987723-8E7A43FB18F2287F-0-e6e19ae39f3cffdf620d96254ede8cc8'
+          },
+          {
+            url: 'https://pengzhenglong.github.io/',
+            image: 'https://doge.zzzmh.cn/wallpaper/origin/c6ac1e46880411ebb6edd017c2d2eca2.jpg/thumbs?auth_key=1623987723-17496251226D46AF-0-0d4e4c90fee686600327099987343243'
+          }]
+        })
+      })
+
       },
     },
   },
