@@ -47,7 +47,7 @@ export default {
   async created() {
     try {
       // 获取轮播图的数据
-      const items = await this.$http.get('./api/banner')
+      const items = await this.$http.get('/api/banner')
       this.items = items.data
       // 获取滚动分类数据
       const lists = await this.$http.get('/api/rollinglist')
