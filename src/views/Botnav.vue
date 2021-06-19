@@ -1,20 +1,23 @@
 <template>
-<div>
-  <router-view/>
-  <cube-tab-bar
-    v-model="selectedLabelDefault"
-    :data="tabs"
-    @click="clickHandler"
-    @change="changeHandler"
-    class="botnav"
-  >
-  </cube-tab-bar>
+  <div>
+    <transition :name="transitionName">
+      <router-view class="Router"></router-view>
+    </transition>
+    <cube-tab-bar
+      v-model="selectedLabelDefault"
+      :data="tabs"
+      @click="clickHandler"
+      @change="changeHandler"
+      class="botnav"
+    >
+    </cube-tab-bar>
   </div>
 </template>
 <script>
 export default {
   data() {
     return {
+      transitionName: 'slide-right',
       selectedLabelDefault: '首页',
       tabs: [{
         label: '首页',
@@ -42,7 +45,7 @@ export default {
     changeHandler(label) {
       // if you clicked different tab, this methods can be emitted
       switch (label) {
-     case '首页':
+        case '首页':
           this.$router.push('/botnav/index');
           break;
         case '分类':
@@ -80,5 +83,23 @@ export default {
   i {
     font-size: 20px;
   }
+}
+
+.Router {
+  position: absolute;
+  width: 100%;
+  transition: all 0.8s ease;
+}
+
+.slide-left-enter, .slide-right-leave-active {
+  opacity: 0;
+  -webkit-transform: translate(100%, 0);
+  transform: translate(100%, 0);
+}
+
+.slide-left-leave-active, .slide-right-enter {
+  opacity: 0;
+  -webkit-transform: translate(-100%, 0);
+  transform: translate(-100%, 0);
 }
 </style>
