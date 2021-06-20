@@ -102,6 +102,14 @@ export default {
   created() {
     // 获取默认的分类数据
     this.getclasssify(0)
+  },
+  mounted(){
+    // 设置滚动盒子的高度
+      const  leftpanels = document.querySelector('.leftpanels')
+       const  rightpanels = document.querySelector('.rightpanels')
+       const  bodyheight  = document.documentElement.clientHeight
+       leftpanels.style.height=bodyheight-57+'px'
+        rightpanels.style.height=bodyheight-57+'px'
   }
 
 }

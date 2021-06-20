@@ -64,7 +64,7 @@ module.exports = {
           },
           {
             url: 'https://pengzhenglong.github.io/',
-            image: 'https://doge.zzzmh.cn/wallpaper/origin/c6ac1e46880411ebb6edd017c2d2eca2.jpg/thumbs?auth_key=1623987723-17496251226D46AF-0-0d4e4c90fee686600327099987343243'
+            image: 'https://seikim.com/i/2021/06/20/h2qs6s.jpg'
           }]
         })
       }),
@@ -74,52 +74,52 @@ module.exports = {
             [
               {
                   url: 'https://pengzhenglong.github.io/',
-                  image: 'https://doge.zzzmh.cn/wallpaper/origin/c6ac1e46880411ebb6edd017c2d2eca2.jpg/thumbs?auth_key=1623987723-17496251226D46AF-0-0d4e4c90fee686600327099987343243',
+                  image: 'https://seikim.com/i/2021/06/20/h2qs6s.jpg',
                   label:'分类一'
               },
                  {
                   url: 'https://pengzhenglong.github.io/',
-                  image: 'https://doge.zzzmh.cn/wallpaper/origin/c6ac1e46880411ebb6edd017c2d2eca2.jpg/thumbs?auth_key=1623987723-17496251226D46AF-0-0d4e4c90fee686600327099987343243',
+                  image: 'https://seikim.com/i/2021/06/20/h2qs6s.jpg',
                   label:'分类一'
               },
                  {
                   url: 'https://pengzhenglong.github.io/',
-                  image: 'https://doge.zzzmh.cn/wallpaper/origin/c6ac1e46880411ebb6edd017c2d2eca2.jpg/thumbs?auth_key=1623987723-17496251226D46AF-0-0d4e4c90fee686600327099987343243',
+                  image: 'https://seikim.com/i/2021/06/20/h2qs6s.jpg',
                   label:'分类一'
               },
                  {
                   url: 'https://pengzhenglong.github.io/',
-                  image: 'https://doge.zzzmh.cn/wallpaper/origin/c6ac1e46880411ebb6edd017c2d2eca2.jpg/thumbs?auth_key=1623987723-17496251226D46AF-0-0d4e4c90fee686600327099987343243',
+                  image: 'https://seikim.com/i/2021/06/20/h2qs6s.jpg',
                   label:'分类一'
               },
                  {
                   url: 'https://pengzhenglong.github.io/',
-                  image: 'https://doge.zzzmh.cn/wallpaper/origin/c6ac1e46880411ebb6edd017c2d2eca2.jpg/thumbs?auth_key=1623987723-17496251226D46AF-0-0d4e4c90fee686600327099987343243',
+                  image: 'https://seikim.com/i/2021/06/20/h2qs6s.jpg',
                   label:'分类一'
               },
                  {
                   url: 'https://pengzhenglong.github.io/',
-                  image: 'https://doge.zzzmh.cn/wallpaper/origin/c6ac1e46880411ebb6edd017c2d2eca2.jpg/thumbs?auth_key=1623987723-17496251226D46AF-0-0d4e4c90fee686600327099987343243',
+                  image: 'https://seikim.com/i/2021/06/20/h2qs6s.jpg',
                   label:'分类一'
               },
                  {
                   url: 'https://pengzhenglong.github.io/',
-                  image: 'https://doge.zzzmh.cn/wallpaper/origin/c6ac1e46880411ebb6edd017c2d2eca2.jpg/thumbs?auth_key=1623987723-17496251226D46AF-0-0d4e4c90fee686600327099987343243',
+                  image: 'https://seikim.com/i/2021/06/20/h2qs6s.jpg',
                   label:'分类一'
               },
                  {
                   url: 'https://pengzhenglong.github.io/',
-                  image: 'https://doge.zzzmh.cn/wallpaper/origin/c6ac1e46880411ebb6edd017c2d2eca2.jpg/thumbs?auth_key=1623987723-17496251226D46AF-0-0d4e4c90fee686600327099987343243',
+                  image: 'https://seikim.com/i/2021/06/20/h2qs6s.jpg',
                   label:'分类一'
               },
                  {
                   url: 'https://pengzhenglong.github.io/',
-                  image: 'https://doge.zzzmh.cn/wallpaper/origin/c6ac1e46880411ebb6edd017c2d2eca2.jpg/thumbs?auth_key=1623987723-17496251226D46AF-0-0d4e4c90fee686600327099987343243',
+                  image: 'https://seikim.com/i/2021/06/20/h2qs6s.jpg',
                   label:'分类一'
               },
                  {
                   url: 'https://pengzhenglong.github.io/',
-                  image: 'https://doge.zzzmh.cn/wallpaper/origin/c6ac1e46880411ebb6edd017c2d2eca2.jpg/thumbs?auth_key=1623987723-17496251226D46AF-0-0d4e4c90fee686600327099987343243',
+                  image: 'https://seikim.com/i/2021/06/20/h2qs6s.jpg',
                   label:'分类一'
               },
             ],

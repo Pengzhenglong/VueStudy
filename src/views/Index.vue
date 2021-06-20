@@ -52,8 +52,8 @@ export default {
       // 获取滚动分类数据
       const lists = await this.$http.get('/api/rollinglist')
       this.lists = lists.data
-    } catch (error) {
-      console.log(error);
+    } catch (err) {
+      console.log(err);
     }
   }
 }
@@ -65,7 +65,7 @@ export default {
     .banner {
       display: block;
       width: 100%;
-      margin: 0 auto;
+      height: 175px;
     }
   }
 
@@ -87,7 +87,7 @@ export default {
 
     p {
       font-size: 14px;
-      padding-bottom: 5px;
+      padding-bottom: 10px;
     }
   }
 }
