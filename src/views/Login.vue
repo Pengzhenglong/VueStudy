@@ -79,13 +79,18 @@ export default {
         const result = await this.$http.get("/api/login", {
           params: this.model,
         });
-       if(result.code=='0'){
-         this.$store.commit('settoken',result.token)
-         window.localStorage.setItem('token',result.token)
-         this.$router.replace({path:'/botnav/index'})
-       }else{
-         alert(result.messages)
-       }
+        if (result.code == '0') {
+          this.$store.commit('settoken', result.token)
+          window.localStorage.setItem('token', result.token)
+          //判断路由是否带参，带参就去到重定向参数地址，否则就去首页
+          if (this.$route.query.redirect) {
+            this.$router.replace({ path: this.$route.query.redirect })
+          } else {
+            this.$router.replace({ path: '/botnav/index' })
+          }
+        } else {
+          alert(result.messages)
+        }
       } catch (error) {
         console.log(error);
       }

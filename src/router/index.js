@@ -55,11 +55,14 @@ export default new Router({
         {
           path: 'cart',
           name: 'cart',
+          meta: { requiresAuth: true },//当有这个字段的时候，我们就认为他这个路由页面是要有登录权限的
           component: () => import('../views/Cart.vue')
+
         },
          {
           path: 'mine',
           name: 'mine',
+          meta: { requiresAuth: true },//当有这个字段的时候，我们就认为他这个路由页面是要有登录权限的
           component: () => import('../views/Mine.vue')
         },
       ]
