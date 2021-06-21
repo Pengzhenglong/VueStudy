@@ -11,12 +11,12 @@
       class="botnav"
     >
     </cube-tab-bar>
-    <span  class="countsum">  {{countsum}}</span>
+    <span  class="countsum">{{countsum}}</span>
   </div>
 </template>
 
 <script>
-import  {mapGetters, mapState}  from  'vuex'
+import  {mapGetters}  from  'vuex'
 export default {
   data() {
     return {
