@@ -2,7 +2,7 @@
   <div>
     <img
       class="header"
-      src="https://doge.zzzmh.cn/wallpaper/origin/47482bcb3a294e868546d6c73f1e7ca8.jpg/thumbs?auth_key=1623899499-5678B92A0C6BECED-0-e1ded7a0a07dbe5b7487cfc15163163fF"
+      src="https://browser9.qhimg.com/bdm/1000_618_80/t019fd908f724f51900.jpg"
       alt=""
     />
     <cube-form

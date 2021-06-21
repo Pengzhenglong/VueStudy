@@ -16,7 +16,7 @@
       <ul>
         <li v-for="(tag, index) in tags" :key="index">
           <img :src="tag.image" alt="" />
-          <p>{{ tag.lable }}</p>
+          <p>{{ tag.label }}<i  class="cubeic-add" @click="addtocart($event,tag)"></i></p>
         </li>
       </ul>
     </cube-scroll>
@@ -97,6 +97,10 @@ export default {
     async getclasssify(index) {
       const result = await this.$http.get('/api/classify', { params: { type: index } })
       this.tags = result.data
+    },
+    // 添加商品到购物车
+    addtocart(e,tag){
+          this.$store.commit('tocart',tag)
     }
   },
   created() {
@@ -116,46 +120,45 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.panelsbox {
+.panelsbox 
   display: flex;
 
-  .leftpanels {
+  .leftpanels 
     width: 30%;
 
-    li {
+    li 
       height: 50px;
       line-height: 50px;
       border-bottom: 1px solid #fff;
       color: #333;
       background: #f8f8f8;
       font-size: 14px;
-    }
+    
 
-    .active {
+    .active 
       background: #fff;
       color: #e93b3d;
-    }
-  }
 
-  .rightpanels {
+  .rightpanels 
     width: 70%;
 
-    ul {
+    ul 
       display: flex;
       flex-wrap: wrap;
 
-      li {
+      li 
         width: 50%;
         justify-content: center;
         align-items: center;
         font-size: 15px;
 
-        img {
+        img 
           width: 80px;
           height: 80px;
-        }
-      }
-    }
-  }
-}
+        
+        .cubeic-add
+          font-size:18px
+          margin-left :5px
+
+
 </style>

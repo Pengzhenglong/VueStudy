@@ -11,10 +11,12 @@
       class="botnav"
     >
     </cube-tab-bar>
+    <span  class="countsum">  {{countsum}}</span>
   </div>
 </template>
 
 <script>
+import  {mapGetters, mapState}  from  'vuex'
 export default {
   data() {
     return {
@@ -38,6 +40,12 @@ export default {
       }]
     }
   },
+computed:{
+    ...mapGetters({
+      countsum:'countsum'
+    })
+},
+
   methods: {
     clickHandler(label) {
       // if you clicked home tab, then print 'Home'
@@ -122,6 +130,18 @@ export default {
   opacity: 0;
   -webkit-transform: translate(-100%, 0);
   transform: translate(-100%, 0);
+}
+.countsum{
+  position :fixed;
+  bottom :33px
+  right :23%;
+    z-index: 1001;
+    width:18px;
+    line-height :18px;
+    border-radius :14px
+    font-size :14px
+    background :red;
+    color:#fff
 }
 </style>
 
